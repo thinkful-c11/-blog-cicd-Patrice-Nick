@@ -14,7 +14,7 @@ describe('BlogPosts', function() {
 
   after(function() {
     return closeServer();
-  })
+  });
 
   it('should list post on GET', function() {
     return chai.request(app)
@@ -40,7 +40,7 @@ describe('BlogPosts', function() {
 			   .send(newItem)
 			   .then(function(res){
 				       res.should.have.status(201);
-				       res.should.be.jsons;
+				       res.should.be.json;
 				       res.body.should.be.a('object');
 				       res.body.should.include.keys('id', 'title', 'content', 'author', 'publishDate');
 				       res.body.id.should.not.be.null;
@@ -57,11 +57,11 @@ describe('BlogPosts', function() {
       publishDate: 236353
 		};
 		return chai.request(app)
-			.get('/blog-posts/:id')
+			.get('/blog-posts/')
 			.then(function(res){
 				updateData.id = res.body[0].id;
 				return chai.request(app)
-					.put(`routes/blogposts/${updateData.id}`)
+					.put(`/blog-posts/${updateData.id}`)
 					.send(updateData)
 			})
 			.then(function(res){
@@ -74,10 +74,10 @@ describe('BlogPosts', function() {
 
   it('should delete blog post on DELETE', function() {
 		return chai.request(app)
-			.get('/blogposts/:id')
+			.get('/blogposts/')
 			.then(function(res){
 				return chai.request(app)
-					.delete(`routes/blogposts/${res.body[0].id}`);
+					.delete(`/blog-posts/${res.body[0].id}`);
 			})
 			.then(function(res){
 				res.should.have.status(204);
