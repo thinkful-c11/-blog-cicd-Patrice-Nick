@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: Ghy7s8DVLa2zGKsQ6IypcJn4sLncTQwZQyvKI7/095caxU2lH5/1FPzRIUsj5sRxod09XfAG5nl7AG0XHR9BH5/FB8YyeANaazhQWhMxZsy4ze4x1rHok1ItkUfGTB8+Hr/XAgQUWjH+nSMRjbavogrx6EuFOyAlT4EiZSFqvZTyQP9tXwX4J53+vmEjjBhZHyHS7M/BJBS875QzxhC+phfUZHEXj8Ct6IARVd845u4SFupg7gwRDyWliR5cK5cDgHL4yJ2bdfjNXK9PXotKGyZFqQZwkO8SmmmnFUgZ7nzZnZXk0M6KNESykxWQf57fotgioYSDDmqZH9r5lJnLLB0+eLv1U/QRbD7rO5hkAeoD/LNV4gHrw33ZW7zywuxIRUI83Zb+MRAW28HlMGNaFj4ilF6cx5/IDOGHbPyxwphczWdMqDSHI4Jnjg5BZetNfeeb2AkJttRXm7bUK1K+ETNEWUfueYwWT2jTL7SCW6wPm2bkwGOhkEtamvkhaMXRoX/SxGatwdUgW6mMIBZxPGDnfoD7mRI+bqliVSCQi0+HyjRbV0l7TnZuSCmnJSrOSX5JpmSfmEutlrbobLB0pPW70BqyXixQ8+Aqh2A/ihtMaTEl6cOCLJdf4iR2760r3De4I4v5XiEv0ld/+/SZAKj5MKtkvT/Bj76krng/rTI=
+  app: secret-fjord-11595
+  on:
+    repo: thinkful-c11/-blog-cicd-Patrice-Nick
