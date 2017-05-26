@@ -74,7 +74,7 @@ describe('BlogPosts', function() {
 
   it('should delete blog post on DELETE', function() {
 		return chai.request(app)
-			.get('/blogposts/')
+			.get('/blog-posts/')
 			.then(function(res){
 				return chai.request(app)
 					.delete(`/blog-posts/${res.body[0].id}`);
