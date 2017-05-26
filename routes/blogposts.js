@@ -59,7 +59,7 @@ router.put('/:id', jsonParser, (req, res) => {
     author: req.body.author,
     publishDate: req.body.publishDate
   });
-  res.sendStatus(204);
+  res.sendStatus(200);
 });
 
 module.exports = router;
