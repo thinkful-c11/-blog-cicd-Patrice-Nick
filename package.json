@@ -1,0 +1,34 @@
+{
+  "name": "blog-patrice-nick",
+  "version": "1.0.0",
+  "description": "test for blogpost",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha ./test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinkful-c11/-blog-cicd-Patrice-Nick.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thinkful-c11/-blog-cicd-Patrice-Nick/issues"
+  },
+  "homepage": "https://github.com/thinkful-c11/-blog-cicd-Patrice-Nick#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2",
+    "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.0.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.4.2"
+  }
+}
