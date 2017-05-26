@@ -18,7 +18,7 @@ describe('BlogPosts', function() {
 
   it('should list post on GET', function() {
     return chai.request(app)
-      .get('routes/blogposts')
+      .get('/blog-posts/')
       .then(function(res) {
           res.should.have.status(200);
           res.should.be.json;
@@ -36,7 +36,7 @@ describe('BlogPosts', function() {
     it('should add an blog post on POST', function(){
 		const newItem = {title: 'sugar honey ice tea', content: 'stuff you want to read', author: 'somebody cool', publishDate:452725};
 		return chai.request(app)
-			   .post('/routes/blogposts')
+			   .post('/blog-posts/')
 			   .send(newItem)
 			   .then(function(res){
 				       res.should.have.status(201);
@@ -57,7 +57,7 @@ describe('BlogPosts', function() {
       publishDate: 236353
 		};
 		return chai.request(app)
-			.get('/routes/blogposts')
+			.get('/blog-posts/:id')
 			.then(function(res){
 				updateData.id = res.body[0].id;
 				return chai.request(app)
@@ -74,7 +74,7 @@ describe('BlogPosts', function() {
 
   it('should delete blog post on DELETE', function() {
 		return chai.request(app)
-			.get('/routes/blogposts')
+			.get('/blogposts/:id')
 			.then(function(res){
 				return chai.request(app)
 					.delete(`routes/blogposts/${res.body[0].id}`);
